@@ -1,0 +1,4 @@
+function merge_pdfs($live_pdf_files, $output_file) {
+	$live_pdf_files = implode(" ", $live_pdf_files);
+	return shell_exec("gswin64 -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=$output_file -dBATCH $live_pdf_files");
+}
